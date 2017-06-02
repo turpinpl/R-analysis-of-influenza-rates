@@ -3,7 +3,6 @@ library(ggplot2)
 library(RColorBrewer)
 library(plyr)
 
-setwd("C:/Users/Patricia/Desktop/School/SSOR/Flu Project")
 All_multi= read.csv(file="ALL_multiple_1.csv", header = TRUE, sep = ",")
 All_multi = na.omit(All_multi)
 
@@ -76,10 +75,8 @@ map_function(1)
 
 for (sequence in 1:52)
 { 
-  jpeg(file=paste("C:/Users/Patricia/Desktop/School/SSOR/Flu Project/jpeg/maps4_",sequence,".jpg",sep=""), quality=100)
+  jpeg(file=paste("maps4_",sequence,".jpg",sep=""), quality=100)
   plot(map_function(sequence))
   dev.off()
 } 
 print("Finished")
-
-
